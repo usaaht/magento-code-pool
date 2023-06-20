@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Dope\Shop\Api\CustomInterface" type="Dope\Shop\Model\Api\Custom"/>
+
+    <preference for="Dope\Shop\Api\Data\UsedInterface" type="Dope\Shop\Model\Used"/>
+
+    <preference for="Dope\Shop\Api\UsedRepositoryInterface" type="Dope\Shop\Model\UsedRepository"/>
+
+</config>

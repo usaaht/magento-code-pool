@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Admin_Pannel::helloworld" title="Hello World" module="Admin_Pannel" sortOrder="51" resource="Admin_Pannel::helloworld"/>
+        <add id="Admin_Pannel::post" title="Manage Posts" module="Admin_Pannel" sortOrder="10" action="Admin_Pannel/post" resource="Admin_Pannel::post" parent="Admin_Pannel::helloworld"/>
+        <add id="Admin_Pannel::hello_configuration" title="Configuration" module="Admin_Pannel" sortOrder="99" parent="Admin_Pannel::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Admin_Pannel::helloworld_configuration"/>
+    </menu>
+</config>
+

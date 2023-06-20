@@ -1,0 +1,13 @@
+<?php
+
+/** @var PromoText $block; */
+
+use Banner\Slider\Block\PromoText;
+
+$helper = $this->helper('Banner\Slider\Helper\Data');
+$text = $helper->yourText();
+?>
+<h1>
+    <?php echo $text ?>
+</h1>
+

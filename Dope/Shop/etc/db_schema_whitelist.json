@@ -1,0 +1,34 @@
+{
+    "my_table": {
+        "column": {
+            "entity_id": true,
+            "Name": true,
+            "Father_Name": true,
+            "Job": true,
+            "Education": true,
+            "Phone_Number": true,
+            "Email": true,
+            "City": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "quote_requests": {
+        "column": {
+            "id": true,
+            "company_name": true,
+            "contact_name": true,
+            "email": true,
+            "phone_number": true,
+            "project_title": true,
+            "quote_needed": true,
+            "budget_status": true,
+            "picture_path": true,
+            "entity_id": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

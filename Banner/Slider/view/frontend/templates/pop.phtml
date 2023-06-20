@@ -1,0 +1,72 @@
+<?php
+
+use Banner\Slider\Block\PopBanner;
+
+/** @var PopBanner $block */
+
+$helper = $this->helper('Banner\Slider\Helper\Data');
+
+$pop = $helper->setImage();
+
+$timeHelper = $this->helper('Banner\Slider\Helper\Data');
+
+$fromDateTime  = $timeHelper->fromDate();
+$toDateTime = $timeHelper->toDate();
+
+?>
+
+<head>
+    <style>
+        #modal-content .modal-inner-content {
+            text-align: center;
+        }
+
+        #modal-content .center-block {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <div id="modal-content">
+        <div class="modal-inner-content">
+            <?php if ($pop && $fromDateTime && $toDateTime): ?>
+                <img src="<?php echo $block->getMagentoUrl() . 'media/logo/' . $pop ?>" alt="Modal Image">
+            <?php else: ?>
+                <p>No image available.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <script>
+        require(
+            [
+                'jquery',
+                'Magento_Ui/js/modal/modal'
+            ],
+            function($, modal) {
+                var options = {
+                    type: 'popup',
+                    responsive: true,
+                    innerScroll: true,
+                    buttons: []
+                };
+
+                modal(options, $('#modal-content'));
+
+                // Get the current date and compare it to the from and to dates
+                var now = new Date();
+                var fromDate = new Date('<?php echo $fromDateTime ?>');
+                var toDate = new Date('<?php echo $toDateTime ?>');
+
+                if (now >= fromDate && now <= toDate) {
+                    // Open the modal automatically when the page is loaded
+                    $("#modal-content").modal("openModal");
+                } else {
+                    // Hide the modal if the current date is outside the from-to range
+                    $("#modal-content").hide();
+                }
+            }
+        );
+    </script>
+</head>
+

@@ -1,0 +1,14 @@
+{
+    "every_song_sales_best_sellers": {
+        "column": {
+            "id": true,
+            "is_featured": true
+        },
+        "index": {
+            "EVERY_SONG_SALES_BEST_SELLERS_IS_FEATURED": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

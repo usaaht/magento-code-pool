@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="POST" url="/V1/rest_dev/custom-api/">
+        <service class="Dope\Shop\Api\CustomInterface" method="setPostData" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="GET" url="/V1/rest_get/custom-api/">
+        <service class="Dope\Shop\Api\CustomInterface" method="getPostData" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="DELETE" url="/V1/rest_del/custom-api">
+        <service class="Dope\Shop\Api\CustomInterface" method="deletePostData" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="PUT" url="/V1/rest_put/custom-api">
+        <service class="Dope\Shop\Api\CustomInterface" method="putData" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+</routes>

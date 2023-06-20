@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="banner_tab" translate="label" sortOrder="110">
+            <label>FME Extension</label>
+        </tab>
+        <section id="banner_section" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Promo Pop Up</label>
+            <tab>banner_tab</tab>
+            <resource>Banner_Slider::acl_path</resource>
+            <group id="general_pop" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Pop</label>
+                <attribute type="expanded">1</attribute>
+                <field id="module_enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable-Banner-Slider</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="logo" translate="label" type="image" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Upload</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
+                    <base_url type="media" scope_info="1">logo</base_url>
+                    <comment><![CDATA[Allowed file types: jpeg, gif, png.]]></comment>
+                </field>
+                <field id="fromdatetime" translate="label" type="date" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>From Date</label>
+                    <frontend_model>Banner\Slider\Block\Adminhtml\TimeSetting</frontend_model>
+                </field>
+                <field id="todatetime" translate="label" type="date" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>To Date</label>
+                    <frontend_model>Banner\Slider\Block\Adminhtml\TimeSetting</frontend_model>
+                </field>
+            </group>
+
+            <group id="my_account_page" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>My Account Page</label>
+                <attribute type="expanded">1</attribute>
+                <field id="show_on_my_account" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show on my account</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="your_text" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Your Text</label>
+                </field>
+            </group>
+
+        </section>
+
+    </system>
+</config>

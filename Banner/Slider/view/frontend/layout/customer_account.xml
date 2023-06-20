@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" label="Customer My Account (All Pages)" design_abstraction="custom">
+    <body>
+        <referenceContainer name="content">
+            <block class="Banner\Slider\Block\PromoText" name="promo.text.for" template="Banner_Slider::promo.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

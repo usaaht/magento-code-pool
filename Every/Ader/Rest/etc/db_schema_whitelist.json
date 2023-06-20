@@ -1,0 +1,17 @@
+{
+    "grid_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "age": true,
+            "phone": true,
+            "city": true,
+            "district": true,
+            "job": true,
+            "country": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

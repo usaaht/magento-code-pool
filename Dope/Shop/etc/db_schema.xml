@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/DeclarationSchema/etc/schema.xsd">
+    <table name="my_table" resource="default" engine="innodb" comment="My Table">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="Name" nullable="false" length="50" comment="Name"/>
+        <column xsi:type="varchar" name="Father_Name" nullable="false" length="50" comment="Father Name"/>
+        <column xsi:type="varchar" name="Job" nullable="true" length="50" comment="Job"/>
+        <column xsi:type="varchar" name="Education" nullable="true" length="50" comment="Education"/>
+        <column xsi:type="varchar" name="Phone_Number" nullable="true" length="20" comment="Phone Number"/>
+        <column xsi:type="varchar" name="Email" nullable="true" length="255" comment="Email"/>
+        <column xsi:type="varchar" name="City" nullable="true" length="50" comment="City"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>
