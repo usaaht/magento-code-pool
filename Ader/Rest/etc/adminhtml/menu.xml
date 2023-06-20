@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ader_Rest::often" title="Often" module="Ader_Rest" sortOrder="51" resource="Ader_Rest::often"/>
+        <add id="Ader_Rest::post" title="Manage Posts" module="Ader_Rest" sortOrder="1000" action="ar_grid/index/index" resource="Ader_Rest::post" parent="Ader_Rest::often"/>
+
+    </menu>
+</config>
